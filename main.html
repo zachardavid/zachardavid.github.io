@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom bouncing image maker</title>
+    <link rel="icon" type="image/x-icon" href="media/favicon.ico">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Custom bouncing image maker</h1>
+        <h2>Created by: @zachardavid</h2>
+    </header>
+
+    <div class="wrapper">
+
+        <div class="settingswrapper">
+            <form id="settingsForm">
+                <label for="Logoupload">Upload custom image:
+                    <input type="file" id="Logoupload" name="Logoupload" accept="image/*">
+                </label>
+
+                <br>
+
+                <label for="Lwidth">Logo width:
+                    <input type="number" id="Lwidth" min="0" name="Lwidth">
+                </label>
+
+                <label for="Lheight">Logo height:
+                    <input type="number" id="Lheight" min="0" name="Lheight">
+                </label>
+
+                <label for="Bwidth">Box width:
+                    <input type="number" id="Bwidth" min="0" name="Bwidth">
+                </label>
+
+                <label for="Bheight">Box height:
+                    <input type="number" id="Bheight" min="0" name="Bheight">
+                </label>
+
+                <label for="Borderradius">Border radius:
+                    <input type="number" id="Borderradius" min="0" name="Borderradius">
+                    <input type="checkbox" id="EnableBorderRadius">
+                </label>
+
+                <h3>*Sizes are given in pixels (px)</h3>
+
+                <br>
+
+                <label for="Speed" id="speedctrl">Speed:
+                    <input type="range" id="Speed" min="0.1" max="10" step="0.1" value="1">
+                    <span id="speedValue">1.0</span>
+                </label>
+
+                <label for="Bgcolor">Background color:
+                    <input type="color" id="Bgcolor" name="Bgcolor" value="#ffffff">
+                </label>
+
+                <label for="Bgimage">Upload custom background image
+                    <input type="file" id="Bgimage" name="Bgimage" accept="image/*">
+                </label>
+
+                <br>
+                <br>
+
+                <button type="button" onclick="applySettings()">Apply Settings</button>
+            </form>
+        </div>
+
+        <div class="boxwrapper">
+            <div id="box" class="box"><img id="logo" src="media/placeholder-cropped.svg" alt=""></div>
+        </div>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Archivo", sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.settingswrapper {
+    display: flex;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#speedctrl {
+    display: flex;
+    align-items: center;
+}
+
+input[type=number],
+input[type=color] {
+    margin: 10px 0;
+    width: 100px;
+    height: 35px;
+}
+
+input[type=file] {
+    margin: 10px 0;
+}
+
+h3 {
+    font-size: 13px;
+    font-weight: 400;
+    opacity: .7;
+}
+
+.boxwrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vh;
+}
+
+.box {
+    background-color: #fff;
+    margin: 0 auto;
+    width: 500px;
+    height: 300px;
+    position: relative;
+    border-radius: 0px;
+    border: 1px solid #111;
+    overflow: hidden;
+}
+
+.box img {
+    display: block;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    animation: moveX 2s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+}
+
+@keyframes moveX {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: calc(100% - 70px);
+    }
+}
+
+@keyframes moveY {
+    from {
+        top: 0;
+    }
+
+    to {
+        top: calc(100% - 70px);
+    }
+}
